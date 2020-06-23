@@ -1,0 +1,20 @@
+/lib/models/pose_hrnet.py：完成功能构建hrnet网络架构
+ 
+包含
+1.基础框架：
+1）resnet网络的两种形式：class BasicBlock(nn.Module)
+                       class Bottleneck(nn.Module)
+2）关键部分：高分辨率模块：class HighResolutionModule(nn.Module)
+            该模块的重要函数：def _make_one_branch
+                            def _make_branches
+                            def _make_fuse_layers
+2.关键点预测模块【完整的网络】： class PoseHighResolutionNet(nn.Module)
+            该模块的重要函数：def _make_transition_layer
+                            def _make_layer
+                            def _make_stage
+
+blog 网络结构 code
+https://blog.csdn.net/weixin_38715903/article/details/101629781
+
+HrNet v2
+http://www.chenblog.ink/articles/Paper_HrNetV2.html
